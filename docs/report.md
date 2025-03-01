@@ -23,10 +23,7 @@ I downloaded it and proceeded to clean the data.
 
 kaggle-dataset
 
-| **Formal**                  | **Informal**              |
-|-----------------------------|--------------------------|
-| How are you today?          | Hey, how's it going?    |
-| I am very sorry for my error. | My bad.                |
+![image](https://github.com/user-attachments/assets/5d93cf99-dea2-458e-813f-60e2809748a7)
 
 
 After I cleaned the data, I split it into three sets:
