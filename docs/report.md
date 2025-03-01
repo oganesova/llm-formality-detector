@@ -32,7 +32,7 @@ After I cleaned the data, I split it into three sets:
 - Test set
 - Validation set
 
-First dataset were saved in CSV format(for BERT) , second in ARROW format (forRoBERTa).
+First dataset were saved in CSV format(for BERT) , second in ARROW format (for RoBERTa).
 
 ### Model Selection
 ___
