@@ -23,6 +23,10 @@ A project for classifying texts as formal or informal using BERT and RoBERTa mod
 ## Installation Steps
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/oganesova/llm-formality-detector.git
+   cd llm-formality-detector
+   ```
 
 2. Set up the environment and install dependencies:
 ```bash
@@ -35,25 +39,28 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 ```
+## Run Data Preparation scripts
+3. First run BERT data preparation, after that RoBERTa. It will save everything in dataset dir 
 
-## Dataset Options
+```bash
+python data/data_preparation.py
 
-The project supports two dataset versions:
-- `formal_informal_dataset.csv`: Full dataset (1,400 lines)
-- `formal_informal_dataset_small.csv`: Test dataset (37 lines)
-
-Place your chosen dataset in the `dataset/` directory.
+python data/data_preparation_spacy.py
+```
 
 ## Training Models
-
+Please run this scripts to train models . I try to push this on GitHUB, but it almost 9GB
 You can train either or both models:
+All models will save in models/ dir 
 
-1. Train BERT:
+4. Train BERT:
+
 ```bash
 python training/train_model_bert.py
 ```
 
-2. Train RoBERTa:
+5. Train RoBERTa:
+
 ```bash
 python training/train_model_roberta.py
 ```
@@ -62,15 +69,25 @@ python training/train_model_roberta.py
 
 Evaluate each model's performance:
 
-1. BERT evaluation:
+6. BERT evaluation:
+
 ```bash
 python evaluate/evaluate_model_bert.py
 ```
 
-2. RoBERTa evaluation:
+7. RoBERTa evaluation:
+
 ```bash
 python evaluate/evaluate_model_roberta.py
 ```
+
+
+## Dataset Options
+
+The project supports two dataset versions:
+- `formal_informal_dataset.csv`: Full dataset (1,400 lines)
+- `formal_informal_dataset_small.csv`: Same dataset , but small version , my computer cant handle 1400 lines (37 lines)
+
 
 ## Project Structure
 
@@ -99,7 +116,7 @@ python evaluate/evaluate_model_roberta.py
 The project is set up with:
 - IntelliJ IDEA configuration (`.idea/` directory)
 - Python virtual environment (`venv/` directory)
-- IntelliJ IDEA module configuration (`llm-model-internship.iml`)
+- IntelliJ IDEA module configuration (`llm-formality-detector-task.iml`)
 
 ## Documentation
 
