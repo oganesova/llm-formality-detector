@@ -23,14 +23,11 @@ I downloaded it and proceeded to clean the data.
 
 kaggle-dataset
 
-Here's a table comparing formal and informal expressions:
-
 | **Formal**                  | **Informal**              |
 |-----------------------------|--------------------------|
 | How are you today?          | Hey, how's it going?    |
 | I am very sorry for my error. | My bad.                |
 
-Would you like more examples added to the table?
 
 After I cleaned the data, I split it into three sets:
 - Training set
