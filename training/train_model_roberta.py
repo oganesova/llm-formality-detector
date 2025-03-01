@@ -2,7 +2,7 @@ from datasets import load_from_disk
 from transformers import Trainer, TrainingArguments, AutoTokenizer, \
     AutoModelForSequenceClassification
 
-train_data_path = "../dataset/train_spacy_dataset"
+train_data_path = "dataset/train_spacy_dataset"
 model_name = "roberta-base"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
@@ -24,7 +24,7 @@ def initialize_model():
 
 def setup_training_args():
     return TrainingArguments(
-        output_dir="../models/roberta_formality_classifier/",
+        output_dir="models/roberta_formality_classifier/",
         evaluation_strategy="no",
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
@@ -47,8 +47,8 @@ def train():
 
     trainer.train()
 
-    models.save_pretrained("../models/roberta_formality_classifier/")
-    tokenizer.save_pretrained("../models/roberta_formality_classifier/")
+    models.save_pretrained("models/roberta_formality_classifier/")
+    tokenizer.save_pretrained("models/roberta_formality_classifier/")
 
     print("Model training complete and saved!")
 

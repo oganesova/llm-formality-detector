@@ -2,10 +2,10 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForSequenceClassification
 from datasets import load_from_disk
 import re
-from evaluate.metric_calculator import MetricsCalculator
+from metric_calculator import MetricsCalculator
 
-model_path = "../models/roberta_formality_classifier/"
-test_dataset_path = "../dataset/test_spacy_dataset"
+model_path = "models/roberta_formality_classifier/"
+test_dataset_path = "dataset/test_spacy_dataset"
 llm_as_a_judge_model = "EleutherAI/pythia-410m"
 llm_judge_text = """
 Text: "{text}"

@@ -5,9 +5,9 @@ from transformers import BertTokenizer, BertForSequenceClassification
 from metric_calculator import MetricsCalculator
 
 
-model_path = "../models/bert_formality_classifier/"
+model_path = "models/bert_formality_classifier/"
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
-test_file_path = "../dataset/test_data.csv"
+test_file_path = "dataset/test_data.csv"
 
 def convert_frame_to_dataset_format(file_path):
     df = pd.read_csv(file_path)

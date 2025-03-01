@@ -47,6 +47,8 @@ pip install -r requirements.txt
 ```bash
 python data/data_preparation.py
 
+python -m spacy download en_core_web_sm
+
 python data/data_preparation_spacy.py
 ```
 

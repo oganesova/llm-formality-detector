@@ -2,8 +2,8 @@ import pandas as pd
 from datasets import Dataset
 from transformers import BertTokenizer, BertForSequenceClassification, Trainer, TrainingArguments
 
-file_path_train = "../dataset/train_data.csv"
-file_path_val = "../dataset/val_data.csv"
+file_path_train = "dataset/train_data.csv"
+file_path_val = "dataset/val_data.csv"
 
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 def convert_frame_to_dataset_format(file_path):
@@ -33,7 +33,7 @@ def load_model():
     model = BertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2)
 
     training_args = TrainingArguments(
-        output_dir="../models/bert_formality_classifier/",
+        output_dir="models/bert_formality_classifier/",
         evaluation_strategy="epoch",
         per_device_train_batch_size=16,
         per_device_eval_batch_size=16,
@@ -50,7 +50,7 @@ def load_model():
     )
 
     trainer.train()
-    trainer.save_model("../models/bert_formality_classifier/")
+    trainer.save_model("models/bert_formality_classifier/")
     print("Model training complete and saved!")
 
 if __name__ == "__main__":

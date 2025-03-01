@@ -27,11 +27,11 @@ def split_dataset(data_frame):
     train['text'] = train['text'].str.strip()
     val['text'] = val['text'].str.strip()
     test['text'] = test['text'].str.strip()
-    train.to_csv("../dataset/train_data.csv", index=False)
-    val.to_csv("../dataset/val_data.csv", index=False)
-    test.to_csv("../dataset/test_data.csv", index=False)
+    train.to_csv("dataset/train_data.csv", index=False)
+    val.to_csv("dataset/val_data.csv", index=False)
+    test.to_csv("dataset/test_data.csv", index=False)
 
 if __name__ == "__main__":
-    dataset_path = "../dataset/formal_informal_dataset.csv"
+    dataset_path = "dataset/formal_informal_dataset.csv"
     clean = dataset_cleaning(dataset_path)
     split_dataset(clean)

@@ -26,12 +26,12 @@ def load_and_preprocess_data(csv_file):
     return train_data, val_data, test_data
 
 def save_datasets(train_dataset, test_dataset, val_dataset):
-    train_dataset.save_to_disk('../dataset/train_spacy_dataset')
-    test_dataset.save_to_disk('../dataset/test_spacy_dataset')
-    val_dataset.save_to_disk('../dataset/val_spacy_dataset')
+    train_dataset.save_to_disk('dataset/train_spacy_dataset')
+    test_dataset.save_to_disk('dataset/test_spacy_dataset')
+    val_dataset.save_to_disk('dataset/val_spacy_dataset')
 
 if __name__ == "__main__":
-    dataset_path = "../dataset/formal_informal_dataset.csv"
+    dataset_path = "dataset/formal_informal_dataset.csv"
     train, val, test = load_and_preprocess_data(dataset_path)
     save_datasets(train, val, test)
 
