@@ -34,7 +34,7 @@ After I cleaned the data, I split it into three sets:
 - Test set
 - Validation set
 
-All datasets were saved in CSV format. The split was for convenience in subsequent processing and training of models.
+First dataset were saved in CSV format(for BERT) , second in ARROW format (forRoBERTa).
 
 ### Model Selection
 ___
