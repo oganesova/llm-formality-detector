@@ -1,5 +1,14 @@
 # Formality Detection Project Report
 
+![image](https://github.com/user-attachments/assets/04700ef1-765f-4406-b2d2-21bfbfb1a9fe)  ![image](https://github.com/user-attachments/assets/e17c821c-d8ba-4d9d-88f6-a21f0a41234e)
+
+![image](https://github.com/user-attachments/assets/ae8da7b0-075b-4d9f-862c-cb5a0fa9b4b1)
+
+![image](https://github.com/user-attachments/assets/2062375d-0539-4de0-96aa-b681a0a9f22b)
+
+![image](https://github.com/user-attachments/assets/6a86a744-b9ef-4e08-abbf-832df069d523)  ![image](https://github.com/user-attachments/assets/d669f7de-68ef-4b01-b4f3-c48959b57205)
+
+
 
 ___
 
