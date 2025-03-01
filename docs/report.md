@@ -17,7 +17,20 @@ ___
 
 ### Dataset Selection and Preparation
 ___
-In my first step in my project, I started with the selection of a proper dataset. I searched a bit and understood that we have a lot of public datasets available, and even we can create synthetic data, which prevents excessive manual data preparation. Then, I found a very good dataset in Kaggle, which has both formal and informal documents. I downloaded it and proceeded to clean the data.
+In my first step in my project, I started with the selection of a proper dataset. I searched a bit and understood that we have a lot of public datasets available, and even we can create synthetic data, which prevents excessive manual data preparation.
+Then, I found a very good dataset in Kaggle, which has both formal and informal documents. 
+I downloaded it and proceeded to clean the data.
+
+kaggle-dataset
+
+Here's a table comparing formal and informal expressions:
+
+| **Formal**                  | **Informal**              |
+|-----------------------------|--------------------------|
+| How are you today?          | Hey, how's it going?    |
+| I am very sorry for my error. | My bad.                |
+
+Would you like more examples added to the table?
 
 After I cleaned the data, I split it into three sets:
 - Training set
