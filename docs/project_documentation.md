@@ -51,7 +51,7 @@
 - Suitable for production use
 - Provides comprehensive training data
 
-### Test Dataset (formal_informal_dataset_small.csv)
+### Same Small Dataset (formal_informal_dataset_small.csv)
 - Contains 37 lines of text
 - Designed for quick testing and development
 - Useful for validating code changes
@@ -72,7 +72,6 @@
 - Advanced NLP processing using spaCy
 - Features:
   - Uses 'en_core_web_sm' spaCy model
-  - Text lemmatization
   - Stop word removal
   - Punctuation cleaning
   - Hugging Face Dataset format conversion
@@ -100,7 +99,7 @@
         - Simple text cleaning
         - CSV-based storage
      b. Advanced NLP preprocessing (data_preparation_spacy.py):
-        - Lemmatization and advanced text cleaning
+        - Advanced text cleaning
         - Stop word and punctuation removal
         - Hugging Face Dataset format
    - Split into train/validation/test sets
@@ -205,7 +204,7 @@ Static methods in `MetricsCalculator` class:
 2. Model Configurations:
    - BERT: 'bert-base-uncased'
    - RoBERTa: 'roberta-base'
-   - LLM Judge: 'EleutherAI/pythia-410m'
+   - LLM Judge: 'EleutherAI/pythia-410m' //Just because it opens, without license and free
 
 3. Data Processing:
    - Train-Test Split: 80-20
