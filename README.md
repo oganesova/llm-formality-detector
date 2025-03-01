@@ -1,7 +1,7 @@
 # Improving Writing Assistance at JetBrains AI
 # Text Formality Classifier
 
-![image](https://github.com/user-attachments/assets/ec54e89a-90a6-4b98-a3ba-5547b1eec939)
+![image](https://github.com/user-attachments/assets/86498349-54dc-4ee3-8257-33c34681a67e)
 
 A project for classifying texts as formal or informal using BERT and RoBERTa models.
 
