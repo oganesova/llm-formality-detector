@@ -22,6 +22,7 @@ Then, I found a very good dataset in Kaggle, which has both formal and informal 
 I downloaded it and proceeded to clean the data.
 
 kaggle-dataset
+I downloaded it from here -- > https://www.kaggle.com/datasets/shiromtcha/formal-and-informal-phrases
 
 ![image](https://github.com/user-attachments/assets/5d93cf99-dea2-458e-813f-60e2809748a7)
 
