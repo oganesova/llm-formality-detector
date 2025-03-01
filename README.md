@@ -51,7 +51,7 @@ python data/data_preparation_spacy.py
 ```
 
 ## Training Models
-Please run this scripts to train models . I try to push this on GitHUB, but it almost 9GB
+Please run this scripts to train models . I try to push this on GitHub, but it almost 9GB.
 You can train either or both models:
 All models will save in models/ dir 
 
