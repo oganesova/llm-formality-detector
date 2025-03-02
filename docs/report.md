@@ -13,6 +13,7 @@ ___
 
 Training - RoBERTA
 ___
+![image](https://github.com/user-attachments/assets/af824865-ae85-4578-8a2e-e5c33281916e)
 
 ___
 
