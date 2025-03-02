@@ -2,28 +2,42 @@ from datasets import load_from_disk
 from transformers import Trainer, TrainingArguments, AutoTokenizer, \
     AutoModelForSequenceClassification
 
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+
+
 train_data_path = "dataset/train_spacy_dataset"
 model_name = "roberta-base"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
 
 def load_and_tokenize_data():
-    train_dataset = load_from_disk(train_data_path)
+    try:
+        train_dataset = load_from_disk(train_data_path)
+        logging.info(f"Loading dataset from: {train_data_path}")
 
-    def tokenize_function(examples):
-        return tokenizer(examples["cleaned_text"], padding="max_length", truncation=True, max_length=128)
+        def tokenize_function(examples):
+            return tokenizer(examples["cleaned_text"], padding="max_length", truncation=True, max_length=128)
 
-    train_dataset = train_dataset.map(tokenize_function, batched=True)
-    train_dataset.set_format(type="torch", columns=["input_ids", "attention_mask", "label"])
+        train_dataset = train_dataset.map(tokenize_function, batched=True)
+        logging.info("Dataset tokenized.")
+        train_dataset.set_format(type="torch", columns=["input_ids", "attention_mask", "label"])
+        logging.info("Dataset format set to torch.")
 
-    return train_dataset
+        return train_dataset
+    except Exception as e:
+        logging.error(f"Error in loading/converting data {train_data_path}: {e}")
 
 def initialize_model():
     return AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
 
+def train():
+    train_dataset = load_and_tokenize_data()
 
-def setup_training_args():
-    return TrainingArguments(
+    logging.info("Starting model training.")
+    models = initialize_model()
+    training_args = TrainingArguments(
         output_dir="models/roberta_formality_classifier/",
         evaluation_strategy="no",
         per_device_train_batch_size=8,
@@ -33,24 +47,21 @@ def setup_training_args():
         logging_dir="./logs"
     )
 
-def train():
-    train_dataset = load_and_tokenize_data()
-    models = initialize_model()
-    training_args = setup_training_args()
-
-
     trainer = Trainer(
         model=models,
         args=training_args,
         train_dataset=train_dataset
     )
+    try:
+        trainer.train()
+        logging.info("Starting model training.")
 
-    trainer.train()
+        models.save_pretrained("models/roberta_formality_classifier/")
+        tokenizer.save_pretrained("models/roberta_formality_classifier/")
 
-    models.save_pretrained("models/roberta_formality_classifier/")
-    tokenizer.save_pretrained("models/roberta_formality_classifier/")
-
-    print("Model training complete and saved!")
+        logging.info("Model training complete and saved!")
+    except Exception as e:
+        logging.error(f"Error while train : {e}")
 
 if __name__ == "__main__":
     print("Starting training...")

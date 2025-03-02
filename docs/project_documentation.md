@@ -52,7 +52,7 @@
 - Provides comprehensive training data
 
 ### Same Small Dataset (formal_informal_dataset_small.csv)
-- Contains 37 lines of text
+- Contains 180 lines of text
 - Designed for quick testing and development
 - Useful for validating code changes
 
@@ -149,10 +149,10 @@ Both models are evaluated using the same metrics for fair comparison:
 ### Data Processing Methods
 #### data_preparation.py
 - `dataset_cleaning(file_path)`: Cleans raw dataset, handles nulls and duplicates, assigns labels
-- `split_dataset(data_frame)`: Splits data into train/val/test sets with 80%-10%-10%
+- `split_dataset(data_frame,path_train, path_val, path_test)`: Splits data into train/val/test sets with 80%-10%-10%
 
 #### data_preparation_spacy.py
-- `preprocess_text(text)`: Applies spaCy NLP processing, lemmatization, and cleaning
+- `preprocess_text(text)`: Applies spaCy NLP processing and cleaning
 - `load_and_preprocess_data(csv_file)`: Processes data with spaCy and converts to hugging face Dataset
 - `save_datasets(train, test, val)`: Saves processed datasets to disk in hugging face format
 

@@ -98,7 +98,7 @@ Thank you for reading! It was an exciting ride into the world of text processing
 ## P.S
 ___
 
-In my screenshots, you can see small numbers like 37,
+In my screenshots, you can see small numbers like 180,
 but my actual dataset contains 1,400 lines.
 I created a smaller version of my dataset for testing purposes
 because, unfortunately, my computer couldn't handle the full
