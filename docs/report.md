@@ -16,6 +16,7 @@ ___
 Training - RoBERTA
 ___
 ![image](https://github.com/user-attachments/assets/af824865-ae85-4578-8a2e-e5c33281916e)
+![image](https://github.com/user-attachments/assets/f1b967ea-0726-493d-b455-1b94169684fc)
 
 ___
 Evaluating - BERT
