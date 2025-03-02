@@ -1,8 +1,10 @@
 # Formality Detection Project Report
 
-Data Prep
+Data Prep for BERT
 ___
 ![image](https://github.com/user-attachments/assets/967a3a75-a39a-464c-ad3d-580247a421e2)
+___
+Data Prep for RoBERTa
 ![image](https://github.com/user-attachments/assets/863852f1-3799-415e-9670-ee5392cabf36)
 ___
 Training - BERT
@@ -10,17 +12,14 @@ ___
 ![image](https://github.com/user-attachments/assets/46158b80-480d-445d-9a4b-b38e2c7258b9)
 ![image](https://github.com/user-attachments/assets/20dcaa59-0ba9-4002-9d1c-a15bab2be820)
 ___
-
 Training - RoBERTA
 ___
 ![image](https://github.com/user-attachments/assets/af824865-ae85-4578-8a2e-e5c33281916e)
 
 ___
-
 Evaluating - BERT
 ___
 ![image](https://github.com/user-attachments/assets/ed23422e-3e39-44fd-bfba-54899b84b5a4)
-
 
 ___
 Evaluating - RoBERTa
